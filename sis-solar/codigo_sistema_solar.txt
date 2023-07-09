@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <header>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="generator" content="Geany 1.37.1" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Aprender</title>
+    </header>
+    <style>
+        *{
+            margin: 0;
+        }
+        #particles-js{
+            background: rgb(1, 10, 17);
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            z-index: -1;
+        }
+        #principal{
+            color: rgba(255, 255, 255, 0.219);
+            margin-top: -45px;
+        }
+		.audio-player1 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: #f2f2f200;
+			margin-top: 71.5rem;
+            margin-left: -64px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+			width: 200px;
+			height: 50px;
+            position: absolute;
+		}
+        .audio-player2 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: #f2f2f200;
+			margin-top: 111.5rem;
+            margin-left: -64px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+			width: 200px;
+			height: 50px;
+            position: absolute;
+		}
+        .audio-player3 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: #f2f2f200;
+			margin-top: 151rem;
+            margin-left: -64px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+			width: 200px;
+			height: 50px;
+            position: absolute;
+		}
+        .audio-player4 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: #f2f2f200;
+			margin-top: 195.5rem;
+            margin-left: -64px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+			width: 200px;
+			height: 50px;
+            position: absolute;
+		}
+        .audio-player5 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: #f2f2f200;
+			margin-top: 237.2rem;
+            margin-left: -64px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+			width: 200px;
+			height: 50px;
+            position: absolute;
+		}
+        .audio-player6 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: #f2f2f200;
+			margin-top: 279.4rem;
+            margin-left: -64px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+			width: 200px;
+			height: 50px;
+            position: absolute;
+		}
+        .audio-player7 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: #f2f2f200;
+			margin-top: 321rem;
+            margin-left: -64px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+			width: 200px;
+			height: 50px;
+            position: absolute;
+		}
+        .audio-player8 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: #f2f2f200;
+			margin-top: 363rem;
+            margin-left: -64px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+			width: 200px;
+			height: 50px;
+            position: absolute;
+		}
+
+		audio {
+			display:none;
+		}
+		button {
+		background-color: #d69864; /* Green */
+		border-radius: 50%;
+		color: rgb(0, 0, 0);
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin-bottom: 10px;
+		cursor: pointer;
+}
+        .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+        /* Estilo de la barra de navegación */
+        .navbar {
+        overflow: hidden;
+        background-color: #33333300;
+}
+
+/* Estilo de los enlaces de la barra de navegación */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Estilo del botón desplegable */
+.dropdown {
+    float: right;
+    overflow: hidden;
+    margin-right: 34px;
+    margin-top: 0px;
+}
+
+/* Estilo del botón desplegable */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: rgb(240, 207, 157);
+    padding: 14px 16px;
+    background-color: inherit;
+    border-radius: 50%;
+}
+.dropdown .dropbtn:hover {
+    transform: scale(1.3);
+}
+/* Cambiar el color de fondo del botón desplegable al pasar el mouse */
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgba(255, 230, 0, 0.171);
+}
+
+/* Estilo del contenido desplegable (oculto por defecto) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 0px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: rgba(255, 230, 0, 0.171);
+    margin-right: 20px;
+}
+/* Estilo de los enlaces del contenido desplegable */
+.dropdown-content a {
+    float: none;
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+/* Cambiar el color de fondo de los enlaces del contenido desplegable al pasar el mouse */
+.dropdown-content a:hover {
+    background-color: rgb(240, 207, 157);
+    transform: scale(1.2);
+    border-radius: 25%;
+}
+
+/* Mostrar el contenido desplegable al pasar el mouse sobre el botón desplegable */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#cohete0{
+	margin-top: 96.4rem;
+	margin-left: 74rem;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	transform: rotate(90deg);
+}
+#cohete1{
+	margin-top: 111.5rem;
+	margin-left: 74rem;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+}
+#cohete2{
+	margin-top: 136rem;
+	margin-left: 74rem;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	transform: rotate(90deg);
+}
+#cohete3{
+	margin-top: 154rem;
+	margin-left: 74rem;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+}
+#cohete4{
+	margin-top: 178rem;
+	margin-left: 74rem;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	transform: rotate(90deg);
+}
+#cohete5{
+	margin-top: 195.5rem;
+	margin-left: 74rem;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+}
+#cohete6{
+	margin-top: 220rem;
+	margin-left: 74rem;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	transform: rotate(90deg);
+}
+#cohete7{
+	margin-top: 237.2rem;
+	margin-left: 74rem;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+}
+#cohete8{
+	margin-top: 262rem;
+	margin-left: 74rem;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	transform: rotate(90deg);
+}
+#cohete9{
+	margin-top: 279.4rem;
+	margin-left: 74rem;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+}
+#cohete10{
+	margin-top: 304rem;
+	margin-left: 74rem;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	transform: rotate(90deg);
+}
+#cohete11{
+	margin-top: 321rem;
+	margin-left: 74rem;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+}
+#cohete12{
+	margin-top: 344rem;
+	margin-left: 74rem;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	transform: rotate(90deg);
+}
+#cohete13{
+	margin-top: 363rem;
+	margin-left: 74rem;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+}
+        #mercuriopng{
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            margin-left: 37vh;
+            margin-top: 70vh;
+        }
+        #mercuriopng:hover{
+            transform: scale(1.3);
+        }
+        #venuspng{
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            margin-left: 52vh;
+            margin-top: 55vh;
+        }
+        #venuspng:hover{
+            transform: scale(1.3);
+        }
+        #martepng{
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            margin-left: 70vh;
+            margin-top: 45vh;
+        }
+        #martepng:hover{
+            transform: scale(1.3);
+        }
+        #jupiterpng{
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            margin-left: 90vh;
+            margin-top: 40vh;
+        }
+        #jupiterpng:hover{
+            transform: scale(1.3);
+        }
+        #saturnopng{
+            width: 110px;
+            height: 80px;
+            position: absolute;
+            margin-left: 106.5vh;
+            margin-top: 45vh;
+        }
+        #saturnopng:hover{
+            transform: scale(1.3);
+        }
+        #uranopng{
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            margin-left: 125vh;
+            margin-top: 55vh;
+        }
+        #uranopng:hover{
+            transform: scale(1.3);
+        }
+        #neptunopng{
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            margin-left: 137vh;
+            margin-top: 68vh;
+        }
+        #neptunopng:hover{
+            transform: scale(1.3);
+        }
+        #tierrajpg{
+            margin-top: 60vh;
+            margin-left: 55vh;
+            width: 500px;
+            height: 650px;
+        }
+        #sun{
+            margin-left: 0vh;
+            margin-top: -70px;
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background-color: rgba(240, 248, 255, 0);
+        }
+        #sun:hover{
+            transform: scale(1.1);
+        }
+        #sp{
+            margin-top: 25px;
+            color: rgb(240, 207, 157);
+            text-align: center;
+            width: 60vh;
+            margin-left: 67vh;
+            position: absolute;
+            font-size: 22px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #sistema{
+            margin-top: 20px;
+            position: absolute;
+            color: rgb(240, 207, 157);
+            margin-left: 79vh;
+        }
+        #mercurio{
+            margin-top: 60px;
+            position: absolute;
+            color: rgb(240, 207, 157);
+            margin-left: 80px;
+        }
+        #mp{
+            margin-top: 90px;
+            margin-left: 80px;
+            position: absolute;
+            color: rgb(240, 207, 157);
+            width: 600px;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #mercurio3d{
+        width:450px;
+        height:450px;
+        background-color:rgba(255, 255, 255, 0.808);
+        margin-left: 110vh;
+        margin-top: 130px;
+}
+        #venus{
+            margin-top: 80px;
+            position: absolute;
+            color: rgb(240, 207, 157);
+            margin-left: 80px;
+        }
+        #vp{
+            margin-top: 11rem;
+            margin-left: 80px;
+            position: absolute;
+            color: rgb(240, 207, 157);
+            width: 600px;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #venus3d{
+        width:450px;
+        height:450px;
+        background-color:rgba(255, 255, 255, 0.808);
+        margin-left: 110vh;
+        margin-top: 180px;
+}
+        #tierra{
+            margin-top: 120px;
+            position: absolute;
+            color: rgb(240, 207, 157);
+            margin-left: 80px;
+        }
+        #tp{
+            margin-top: 150px;
+            margin-left: 80px;
+            position: absolute;
+            color: rgb(240, 207, 157);
+            width: 600px;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #tierra3d{
+        width:450px;
+        height:450px;
+        background-color:rgba(255, 255, 255, 0.808);
+        margin-left: 110vh;
+        margin-top: 230px;
+}
+        #marte{
+            margin-top: 150px;
+            position: absolute;
+            color: rgb(240, 207, 157);
+            margin-left: 80px;
+        }
+        #martep{
+            margin-top: 180px;
+            margin-left: 80px;
+            position: absolute;
+            color: rgb(240, 207, 157);
+            width: 600px;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #marte3d{
+        width:450px;
+        height:450px;
+        background-color:rgba(255, 255, 255, 0.808);
+        margin-left: 110vh;
+        margin-top: 220px;
+}
+        #jupiter{
+            margin-top: 150px;
+            position: absolute;
+            color: rgb(240, 207, 157);
+            margin-left: 80px;
+        }
+        #jupiterp{
+            margin-top: 180px;
+            margin-left: 80px;
+            position: absolute;
+            color: rgb(240, 207, 157);
+            width: 600px;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #jupiter3d{
+        width:450px;
+        height:450px;
+        background-color:rgba(255, 255, 255, 0.808);
+        margin-left: 110vh;
+        margin-top: 220px;
+}
+        #saturno{
+            margin-top: 150px;
+            position: absolute;
+            color: rgb(240, 207, 157);
+            margin-left: 80px;
+        }
+        #saturnop{
+            margin-top: 180px;
+            margin-left: 80px;
+            position: absolute;
+            color: rgb(240, 207, 157);
+            width: 600px;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #saturno3d{
+        width:450px;
+        height:450px;
+        background-color:rgba(255, 255, 255, 0.808);
+        margin-left: 110vh;
+        margin-top: 220px;
+}
+        #urano{
+            margin-top: 150px;
+            position: absolute;
+            color: rgb(240, 207, 157);
+            margin-left: 80px;
+        }
+        #uranop{
+            margin-top: 180px;
+            margin-left: 80px;
+            position: absolute;
+            color: rgb(240, 207, 157);
+            width: 600px;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #urano3d{
+        width:450px;
+        height:450px;
+        background-color:rgba(255, 255, 255, 0.808);
+        margin-left: 110vh;
+        margin-top: 220px;
+}
+        #neptuno{
+            margin-top: 150px;
+            position: absolute;
+            color: rgb(240, 207, 157);
+            margin-left: 80px;
+        }
+        #neptunop{
+            margin-top: 180px;
+            margin-left: 80px;
+            position: absolute;
+            color: rgb(240, 207, 157);
+            width: 600px;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #neptuno3d{
+        width:450px;
+        height:450px;
+        background-color:rgba(255, 255, 255, 0.808);
+        margin-left: 110vh;
+        margin-top: 220px;
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="dropdown">
+        <button class="dropbtn"><span class="material-symbols-outlined">
+            menu
+            </span>
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" style="right: 0;">
+            <a href="#">Inicio</a>
+            <a href="#">Redes</a>
+            <a href="#">Contacto</a>
+        </div>
+        </div>
+    </div>
+    <div class="audio-player1">
+		<audio controls>
+			<source src="audio1.mp3" type="audio/mpeg">
+			Tu navegador no soporta el elemento audio.
+		</audio>
+		<button onclick="var audio = document.getElementsByTagName('audio')[0]; if (audio.paused) { audio.play(); this.innerHTML = '| |'; } else { audio.pause(); this.innerHTML = '►'; }">►</button>
+	</div>
+    <div class="audio-player2">
+		<audio controls>
+			<source src="audio1.mp3" type="audio/mpeg">
+			Tu navegador no soporta el elemento audio.
+		</audio>
+		<button onclick="var audio = document.getElementsByTagName('audio')[0]; if (audio.paused) { audio.play(); this.innerHTML = '| |'; } else { audio.pause(); this.innerHTML = '►'; }">►</button>
+	</div>
+    <div class="audio-player3">
+		<audio controls>
+			<source src="audio1.mp3" type="audio/mpeg">
+			Tu navegador no soporta el elemento audio.
+		</audio>
+		<button onclick="var audio = document.getElementsByTagName('audio')[0]; if (audio.paused) { audio.play(); this.innerHTML = '| |'; } else { audio.pause(); this.innerHTML = '►'; }">►</button>
+	</div>
+    <div class="audio-player4">
+		<audio controls>
+			<source src="audio1.mp3" type="audio/mpeg">
+			Tu navegador no soporta el elemento audio.
+		</audio>
+		<button onclick="var audio = document.getElementsByTagName('audio')[0]; if (audio.paused) { audio.play(); this.innerHTML = '| |'; } else { audio.pause(); this.innerHTML = '►'; }">►</button>
+	</div>
+    <div class="audio-player5">
+		<audio controls>
+			<source src="audio1.mp3" type="audio/mpeg">
+			Tu navegador no soporta el elemento audio.
+		</audio>
+		<button onclick="var audio = document.getElementsByTagName('audio')[0]; if (audio.paused) { audio.play(); this.innerHTML = '| |'; } else { audio.pause(); this.innerHTML = '►'; }">►</button>
+	</div>
+    <div class="audio-player6">
+		<audio controls>
+			<source src="audio1.mp3" type="audio/mpeg">
+			Tu navegador no soporta el elemento audio.
+		</audio>
+		<button onclick="var audio = document.getElementsByTagName('audio')[0]; if (audio.paused) { audio.play(); this.innerHTML = '| |'; } else { audio.pause(); this.innerHTML = '►'; }">►</button>
+	</div>
+    <div class="audio-player7">
+		<audio controls>
+			<source src="audio1.mp3" type="audio/mpeg">
+			Tu navegador no soporta el elemento audio.
+		</audio>
+		<button onclick="var audio = document.getElementsByTagName('audio')[0]; if (audio.paused) { audio.play(); this.innerHTML = '| |'; } else { audio.pause(); this.innerHTML = '►'; }">►</button>
+	</div>
+    <div class="audio-player8">
+		<audio controls>
+			<source src="audio1.mp3" type="audio/mpeg">
+			Tu navegador no soporta el elemento audio.
+		</audio>
+		<button onclick="var audio = document.getElementsByTagName('audio')[0]; if (audio.paused) { audio.play(); this.innerHTML = '| |'; } else { audio.pause(); this.innerHTML = '►'; }">►</button>
+	</div>
+    <div class="cohete">
+        <a href="#venus"><img id="cohete0" src="cohetegif.gif" alt="cohete"></a>
+        <a href="#mercurio"><img id="cohete1" src="cohetegif.gif" alt="cohete"></a>
+        <a href="#tierra"><img id="cohete2" src="cohetegif.gif" alt="cohete"></a>
+        <a href="#venus"><img id="cohete3" src="cohetegif.gif" alt="cohete"></a>
+        <a href="#marte"><img id="cohete4" src="cohetegif.gif" alt="cohete"></a>
+        <a href="#tierra"><img id="cohete5" src="cohetegif.gif" alt="cohete"></a>
+        <a href="#jupiter"><img id="cohete6" src="cohetegif.gif" alt="cohete"></a>
+        <a href="#marte"><img id="cohete7" src="cohetegif.gif" alt="cohete"></a>
+        <a href="#saturno"><img id="cohete8" src="cohetegif.gif" alt="cohete"></a>
+        <a href="#jupiter"><img id="cohete9" src="cohetegif.gif" alt="cohete"></a>
+        <a href="#urano"><img id="cohete10" src="cohetegif.gif" alt="cohete"></a>
+        <a href="#jupiter"><img id="cohete11" src="cohetegif.gif" alt="cohete"></a>
+        <a href="#neptuno"><img id="cohete12" src="cohetegif.gif" alt="cohete"></a>
+        <a href="#urano"><img id="cohete13" src="cohetegif.gif" alt="cohete"></a>
+        </div>
+    <main id="principal">
+
+        <h1 id="sistema">El Sistema Solar</h1><br><br><p id="sp">Es un conjunto formado por el Sol y los ocho planetas que giran a su alrededor. De los ocho planetas, uno es donde vivimos: la Tierra.
+        Además de estos elementos  hay otros cuerpos celestes que también orbitan alrededor de la gran estrella solar, como los satélites de cada planeta, los cometas o los asteroides. </p>
+        <a href="#mercurio"><img id="mercuriopng" src="mercuriopng.png" alt="mercuriopng"></a>
+        <a href="#venus"><img id="venuspng" src="venuspng.png" alt="venuspng"></a>
+        <a href="#marte"><img id="martepng" src="martepng.png" alt="martepng"></a>
+        <a href="#jupiter"><img id="jupiterpng" src="jupiterpng.png" alt="jupiterpng"></a>
+        <a href="#saturno"><img id="saturnopng" src="saturnopng.png" alt="saturnopng"></a>
+        <a href="#urano"><img id="uranopng" src="uranopng.png" alt="uranopng"></a>
+        <a href="#neptuno"><img id="neptunopng" src="neptunopng.png" alt="neptunopng"></a>
+        <img id="sun" src="sun.png" alt="sun">
+        <img id="tierrajpg" src="done.png" alt="tierra">
+        <h1 id="mercurio"> <br>Planeta Mercurio </h1><p id="mp"><br><br>Es el que está más cerca del Sol y también el más chiquitín. Es un planeta sin satélites en su órbita.<br><br>Mercurio tiene una superficie cubierta de cráteres y llanuras. Los cráteres son el resultado de impactos de meteoritos a lo largo de millones de años, y algunas llanuras son áreas planas formadas por la actividad volcánica pasada. Uno de los rasgos más destacados de Mercurio es el Caloris Basin, un enorme cráter de impacto que mide aproximadamente 1,550 kilómetros de diámetro.<br> <br>Debido a su proximidad al Sol, Mercurio experimenta temperaturas extremas. Durante el día, la temperatura puede alcanzar hasta 430 grados Celsius, mientras que durante la noche, puede descender hasta -180 grados Celsius. Estas fluctuaciones extremas hacen que Mercurio sea un lugar inhóspito para la vida tal como la conocemos.<br><br>A Mercurio le gusta simplificar las cosas. Este planeta pequeño da vueltas lentamente comparado con la Tierra, por lo tanto, un día dura un largo tiempo.
+        </p>
+        <model-viewer id="mercurio3d" src="mercurio/scene.gltf" alt="mercurio3d" shadow-intensity="1" camera-controls auto-rotate ar >
+        </model-viewer>
+        <h1 id="venus"><br><br> Planeta Venus </h1><p id="vp"><br>Venus es el segundo planeta más cercano al Sol y tiene un tamaño muy similar a la Tierra.<br>Una característica importante de Venus es que su atmósfera refleja una gran cantidad de luz. Esto le convierte en el segundo cuerpo más brillante del cielo nocturno, por detrás de la Luna. Venus es tan brillante que, en condiciones adecuadas, puede ser visto incluso de día y a simple vista.<br> <br>Su masa y estructura interna son similares a las de nuestro planeta. Estas similitudes han hecho que a menudo se haya dicho que Venus es el planeta hermano de la Tierra. Aún así, también es importante decir que hay muchos aspectos en los cuales los dos planetas son completamente distintos, entre ellos, las propiedades de su atmósfera.<br><br>El planeta Venus gira muy lentamente sobre su eje. Esto hace que un día solar en Venus dure casi tanto como un año venusiano, es decir, el tiempo que tarda en dar una vuelta alrededor del Sol.
+        </p>
+        <model-viewer id="venus3d" src="venus/scene.gltf" alt="venus3d" shadow-intensity="1" camera-controls auto-rotate ar >
+        </model-viewer>
+        <h1 id="tierra"> <br>Planeta Tierra </h1><p id="tp"><br><br>La Tierra es el tercer planeta más cercano al Sol y es el hogar de una gran diversidad de vida. Tiene un tamaño y una masa que la hacen única en nuestro sistema solar.<br><br>La atmosfera de la tierra es crucial para el sustento de la vida. La atmósfera terrestre está compuesta principalmente de nitrógeno, oxígeno y otros gases que permiten la existencia de organismos vivos. Además, la atmósfera actúa como un escudo protector que bloquea la radiación dañina del Sol.<br><br>La Tierra es el único planeta conocido hasta ahora donde se encuentra agua líquida en abundancia. Los océanos y los cuerpos de agua dulce cubren gran parte de su superficie, desempeñando un papel vital en el equilibrio climático y como hábitat para numerosas especies.<br><br>Es un planeta increíblemente diverso, con una amplia variedad de paisajes, desde montañas majestuosas hasta vastas llanuras, exuberantes selvas tropicales y áridos desiertos. Es el hogar de millones de especies, incluido el ser humano, y proporciona un entorno propicio para el desarrollo y el avance de la civilización humana.
+        </p>
+        <model-viewer id="tierra3d" src="tierra/scene.gltf" alt="tierra3d" shadow-intensity="1" camera-controls auto-rotate ar >
+        </model-viewer>
+        <h1 id="marte"> <br>Planeta Marte </h1><p id="martep"><br><br>Marte es el cuarto planeta en distancia al Sol y es conocido como el "Planeta Rojo" debido a su apariencia distintiva. Es un planeta rocoso con una atmósfera delgada compuesta principalmente de dióxido de carbono.<br><br>Una de las características más notables de Marte es su paisaje marciano, que incluye vastas llanuras, volcanes y cañones. El Monte Olimpo, el volcán más grande conocido en el sistema solar, se encuentra en Marte. También hay evidencia de antiguos lechos de ríos y océanos secos, lo que sugiere que en el pasado Marte pudo haber tenido agua líquida en su superficie.<br> <br>A pesar de las condiciones extremas, Marte ha sido objeto de gran interés para la exploración espacial. Varios robots y rovers han sido enviados para estudiar su geología, atmósfera y buscar signos de vida pasada o presente. La posibilidad de colonizar Marte en el futuro también ha sido objeto de investigación y especulación.<br><br>Marte también posee dos características distintivas en su superficie: los casquetes polares de hielo, que están compuestos principalmente de agua congelada y dióxido de carbono congelado, y las tormentas de polvo marcianas, que pueden cubrir gran parte del planeta y afectar la visibilidad.
+        </p>
+        <model-viewer id="marte3d" src="marte/scene.gltf" alt="marte3d" shadow-intensity="1" camera-controls auto-rotate ar >
+        </model-viewer>
+        <h1 id="jupiter"> <br>Planeta Jupiter </h1><p id="jupiterp"><br><br>Júpiter es el quinto planeta en distancia al Sol y el más grande de todos. Es un gigante gaseoso compuesto principalmente de hidrógeno y helio. Su tamaño es tan masivo que podría albergar a todos los demás planetas del sistema solar en su interior.<br><br>Una de las características más destacadas de Júpiter son sus bandas nubosas y su Gran Mancha Roja. Las bandas nubosas son franjas de nubes en movimiento que rodean el planeta, mientras que la Gran Mancha Roja es una gigantesca tormenta que ha estado activa durante siglos. Júpiter también tiene una serie de lunas, siendo las cuatro más grandes conocidas como las lunas galileanas: Ío, Europa, Ganimedes y Calisto.<br><br>A diferencia de los planetas rocosos, Júpiter no tiene una superficie sólida definida. En cambio, su atmósfera se va volviendo gradualmente más densa hacia el centro del planeta. A medida que nos adentramos en Júpiter, la presión y la temperatura aumentan enormemente.<br><br>Júpiter, con su tamaño y características únicas, desempeña un papel importante en la dinámica del sistema solar. Su influencia gravitacional afecta la órbita de otros planetas y cuerpos celestes, y su estudio nos ayuda a comprender mejor la formación y evolución de nuestro sistema solar.
+        </p>
+        <model-viewer id="jupiter3d" src="jupiter/scene.gltf" alt="jupiter3d" shadow-intensity="1" camera-controls auto-rotate ar >
+        </model-viewer>
+        <h1 id="saturno"><br> Planeta Saturno </h1><p id="saturnop"><br><br>Saturno es el sexto planeta en distancia al Sol y es conocido por sus impresionantes anillos que lo rodean. Es un gigante gaseoso compuesto principalmente de hidrógeno y helio, similar a Júpiter.<br><br>La característica más notable de Saturno son sus anillos, que están compuestos principalmente de partículas de hielo y roca en órbita alrededor del planeta. Estos anillos son visibles incluso desde la Tierra con un telescopio, y le dan a Saturno su apariencia distintiva. Los anillos están formados por innumerables partículas pequeñas que varían en tamaño, desde partículas de polvo hasta enormes bloques de hielo.<br><br>El planeta Saturno también tiene una serie de lunas, siendo la más grande y conocida Titán. Titán es una de las lunas más interesantes del sistema solar, ya que tiene una atmósfera densa compuesta principalmente de nitrógeno, similar a la atmósfera temprana de la Tierra.<br><br>A medida que continuamos explorando el espacio, Saturno sigue siendo un destino emocionante y fascinante para futuras misiones que nos ayudarán a desentrañar los secretos de este enigmático planeta y sus magníficos anillos.
+        </p>
+        <model-viewer id="saturno3d" src="saturno/scene.gltf" alt="saturno3d" shadow-intensity="1" camera-controls auto-rotate ar >
+        </model-viewer>
+        <h1 id="urano"><br> Planeta Urano </h1><p id="uranop"><br><br>Urano es el séptimo planeta en distancia al Sol y es conocido por su color azul verdoso distintivo. Es un gigante gaseoso compuesto principalmente de hidrógeno y helio, al igual que Júpiter y Saturno.<br><br>Urano es notable por su inclinación axial extrema. A diferencia de otros planetas del sistema solar, Urano tiene un eje de rotación prácticamente en paralelo a su plano orbital, lo que significa que se encuentra 'acostado' de lado. Esto da como resultado estaciones extremas y patrones climáticos únicos en el planeta.<br><br>Urano también cuenta con un sistema de anillos, aunque son menos prominentes y espectaculares que los de Saturno. Estos anillos están compuestos principalmente de partículas de hielo y polvo.<br><br>Al igual que Júpiter y Saturno, Urano tiene una atmósfera compuesta principalmente de hidrógeno y helio, pero también contiene cantidades significativas de metano. Es precisamente el metano en la atmósfera lo que le da a Urano su color azul verdoso distintivo, ya que el metano absorbe las longitudes de onda rojas de la luz solar y refleja las longitudes de onda azules y verdes.
+        </p>
+        <model-viewer id="urano3d" src="urano/scene.gltf" alt="urano3d" shadow-intensity="1" camera-controls auto-rotate ar >
+        </model-viewer>
+        <h1 id="neptuno"><br> Planeta Neptuno </h1><p id="neptunop"><br><br>Neptuno es el octavo y último planeta en distancia al Sol en nuestro sistema solar. Es un gigante gaseoso compuesto principalmente de hidrógeno y helio, similar a Urano, Júpiter y Saturno.<br><br>Neptuno es conocido por su hermoso tono azul profundo, que es el resultado de la presencia de metano en su atmósfera. El metano absorbe las longitudes de onda rojas de la luz solar y refleja las longitudes de onda azules, dando a Neptuno su distintivo color azul.<br><br>Neptuno también cuenta con una serie de características atmosféricas interesantes, como nubes y tormentas. Una de las características más destacadas es la Gran Mancha Oscura, una gigantesca tormenta similar a la Gran Mancha Roja de Júpiter. Esta tormenta ha sido observada desde la década de 1980 y ha demostrado ser bastante dinámica.<br><br>El estudio de Neptuno nos brinda una mayor comprensión de los gigantes gaseosos y nos permite comparar y contrastar las características de los diferentes planetas en nuestro sistema solar. Su color distintivo, sus características atmosféricas y su sistema de lunas lo convierten en un objeto fascinante digno de investigación y exploración.<br><br><br><br><br>
+        </p>
+        <model-viewer id="neptuno3d" src="neptuno/scene.gltf" alt="neptuno3d" shadow-intensity="1" camera-controls auto-rotate ar >
+        </model-viewer>
+    </main>
+
+
+    <div class="scripts">
+    <div id="particles-js"></div>
+
+    <!-- particulas libreria -->
+    <script src="particles.min.js"></script>
+
+
+    <!-- libreria 3d -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+    
+    <!-- Loads <model-viewer> for modern browsers: -->
+	<script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
+
+<!-- Loads <model-viewer> for old browsers like IE11: -->
+    <script nomodule
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+    </script>
+<!-- enlace a aprenderjs.js-->
+    <script src="aprendejs.js"></script>
+</div>
+</body>
+
+</html>

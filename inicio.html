@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="generator" content="Geany 1.37.1" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Aprender</title>
+    <style>
+        *{
+			margin: 0;
+			padding: 0;
+		}
+		header{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			transition: 0.7s;
+			padding: 30px 20px;
+			z-index: 10;
+            background-color: #1d205021;
+		}
+        header.abajo{
+            background: #00000079;
+            padding: 15px 20px;
+        }
+        #logopng{
+            height: 40px;
+            margin-left: -170px;
+        }
+		#aprenderh{
+			position: absolute;
+			color: rgb(214, 191, 126);
+			font-weight: bold;
+			font-size: 2em;
+			letter-spacing: 2px;
+			transition: 1.5s;
+			text-decoration: none;
+            margin-left: 20px;
+		}
+		nav{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		header ul{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+            
+		}
+		header ul li{
+			list-style: none;
+		}
+		header ul li a{
+			position: relative;
+			font-family: helvetica;
+			margin: 0 15px;
+			text-decoration: none;
+			color: rgb(214, 191, 126);
+			letter-spacing: 2px;
+			font-weight: 600;
+			transition: 0.7s;
+		}
+        #inicionav{
+            margin-left: -20px;
+            position: absolute;
+            margin-top: -10px;
+            width: 300px;
+        }
+        #somosnav{
+            margin-left: -140px;
+            position: absolute;
+            margin-top: -10px;
+        }
+        #inicionav2{
+            margin-left: -100px;
+            position: absolute;
+            margin-top: -10px;
+            width: 300px;
+        }
+        #somosnav2{
+            margin-left: 0px;
+            position: absolute;
+            margin-top: -10px;
+        }
+        #particles-js{
+            background: rgb(1, 10, 17);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            z-index: -1;
+        }
+        #arrecife{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin-top: 697px;
+        }
+        #moviendoentre{
+            width: 400px;
+            height: 550px;
+            position: absolute;
+            margin-left: 90px;
+            margin-top: 35px;
+        }
+        #viaja{
+            color: rgb(214, 191, 126);
+            width: 700px;
+            margin-left: 550px;
+            position: absolute;
+            margin-top: 200px;
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #sumerge{
+            color: rgb(214, 191, 126);
+            width: 500px;
+            margin-left: 615px;
+            position: absolute;
+            margin-top: 820px;
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #pecesnadando{
+            width: 400px;
+            height: 600px;
+            position: absolute;
+            margin-left: 200px;
+            margin-top: 650px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="nav1">
+        <ul>
+                <li><a id="inicionav" href="#">Sistema Solar</a></li>
+                <li><a id="somosnav" href="#"></a></li>
+            </ul>
+        </nav>
+        <img id="logopng" src="cerebrocohete.png" alt="logo">
+        <a id="aprenderh" href="#">Aprender</a>
+        <nav>
+            <ul>
+                <li><a id="inicionav2" href="#arrecife">El Oceáno</a></li>
+                <li><a id="somosnav2" href="#objetivo"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="sissolar">
+        <video autoplay muted loop id="moviendoentre">
+            <source src="moviendo_entre_planetas.mp4" type="video/mp4"></source>
+        </video>
+        <p id="viaja">¿Te gustaría viajar por el espacio y conocer los secretos del sistema solar? ¿Te gustaría ver de cerca los planetas que giran alrededor del sol? ¿Te gustaría aprender más sobre la historia, la estructura, el movimiento, el clima y la vida de estos cuerpos celestes? Si tu respuesta es sí, entonces estás en el lugar correcto.<br> Bienvenido a Aprender, un sitio web de educación que fomenta el aprendizaje de forma divertida, didactica y fácil sobre temas fascinantes.<br> Aquí encontrarás modelos 3D, gifs, vídeos e imágenes de alta calidad que te mostrarán el sistema solar como nunca lo habías visto. Adquiere solidos conocimientos y aprende más sobre el espacio. ¿Estás listo para embarcarte en esta aventura espacial? Entonces ¡Prepárate para despegar!. ¡Allá vamos!</p>
+    </div>
+    <div class="oceano">
+        <img id="arrecife" src="arre5.jpg" alt="arrecife">
+        <video autoplay muted loop id="pecesnadando">
+            <source src="peces_nadando.mp4" type="video/mp4"></source>
+        </video>
+        
+        <p id="sumerge">¿Te gustaría sumergirte en el océano y conocer los secretos de sus profundidades? ¿Te gustaría ver de cerca los arrecifes, las ballenas, las orcas y los pulpos gigantes que habitan en sus aguas? ¿Te gustaría aprender más sobre los ecosistemas, las especies, los fenómenos y los recursos que se encuentran en el océano? Si tu respuesta es sí, entonces este bloque es para ti. Bienvenido al segundo tema de estudio de Aprender, donde podrás explorar y aprender de forma divertida, didactica y fácil sobre este tema tan fascinante. Aquí encontrarás gifs, vídeos e imágenes de alta calidad que te mostrarán el océano como nunca lo habías visto. ¿Estás listo para embarcarte en esta aventura marina? Entonces ¡Prepárate para bucear!<br>¡Vamos a sumergirnos!</p>
+    </div>
+
+
+
+
+<div id="particles-js"></div>
+    <!-- particulas libreria -->
+    <script src="particles.min.js"></script>
+
+    <!-- enlace a aprenderjs.js-->
+    <script src="aprendejs.js"></script>
+    
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("abajo",window.scrollY>0);
+        })
+    </script> 
+</body>
+
+
+</html>

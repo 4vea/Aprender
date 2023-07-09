@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            background-color: black;
+        }
+        #tierra{
+            margin-top: 150px;
+            position: absolute;
+            color: rgb(240, 207, 157);
+            margin-left: 80px;
+        }
+        #tp{
+            margin-top: 180px;
+            margin-left: 80px;
+            position: absolute;
+            color: rgb(240, 207, 157);
+            width: 600px;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #tierra3d{
+        width:400px;
+        height:400px;
+        background-color:rgba(255, 255, 255, 0.808);
+        margin-left: 110vh;
+        margin-top: 150px;
+}
+    </style>
+</head>
+<body>
+    <h1 id="tierra"> Planeta Tierra </h1><p id="tp"><br>La Tierra es el tercer planeta más cercano al Sol y es el hogar de una gran diversidad de vida. Tiene un tamaño y una masa que la hacen única en nuestro sistema solar.<br><br>La atmosfera de la tierra es crucial para el sustento de la vida. La atmósfera terrestre está compuesta principalmente de nitrógeno, oxígeno y otros gases que permiten la existencia de organismos vivos. Además, la atmósfera actúa como un escudo protector que bloquea la radiación dañina del Sol.<br><br>La Tierra es el único planeta conocido hasta ahora donde se encuentra agua líquida en abundancia. Los océanos y los cuerpos de agua dulce cubren gran parte de su superficie, desempeñando un papel vital en el equilibrio climático y como hábitat para numerosas especies.<br><br>Es un planeta increíblemente diverso, con una amplia variedad de paisajes, desde montañas majestuosas hasta vastas llanuras, exuberantes selvas tropicales y áridos desiertos. Es el hogar de millones de especies, incluido el ser humano, y proporciona un entorno propicio para el desarrollo y el avance de la civilización humana.
+    </p>
+    <model-viewer id="tierra3d" src="tierra/scene.gltf" alt="tierra3d" shadow-intensity="1" camera-controls auto-rotate ar >
+    </model-viewer>
+
+    <!-- libreria 3d -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+    
+    <!-- Loads <model-viewer> for modern browsers: -->
+	<script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
+
+<!-- Loads <model-viewer> for old browsers like IE11: -->
+    <script nomodule
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+    </script>
+</body>
+</html>
